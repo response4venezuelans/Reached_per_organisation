@@ -18,12 +18,12 @@ shinyServer(function(input, output, session) {
     df
   })
   
-
+  data2 <- reactive({
+    df2 <- ConsolidatedPerCountryperOrg
+  })
   
   ## Preview of NUmber of questions
   output$nactivities <- renderText({nrow(data())})
-  
-  # extensions='FixedColumns'
   
   ## Data Preview
   output$Preview_Data <- DT::renderDataTable({data()}, options = list(
@@ -47,15 +47,6 @@ shinyServer(function(input, output, session) {
       write_xlsx(data(), file)
     }
   )
-  
-  # ## Download Selection
-  # output$download <- downloadHandler(
-  #   filename = function() {
-  #     paste("R4Vql", ".xlsx", sep = "")
-  #   },
-  #   content = function(file) {
-  #     write_xlsx(data(), file)
-  #   }
-  # )
+
   
 })
