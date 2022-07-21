@@ -11,7 +11,7 @@ library(writexl)
 
 #### Montly volume of attention ###
 #### General ####
-monthlysectors <- df5Wconsolidated%>%
+monthlysectors <- df5Wconsolidated %>%
   group_by(Country, Appealing_org, Month, Subsector)%>%
   summarise('Monthly Total Beneficiaries' = sum(Total_monthly))
 
