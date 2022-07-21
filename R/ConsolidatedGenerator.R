@@ -11,6 +11,9 @@ library(writexl)
 
 #### Montly volume of attention ###
 #### General ####
+
+source("./R/RMRPDataLoad.R")
+
 monthlysectors <- df5Wconsolidated %>%
   group_by(Country, Appealing_org, Month, Subsector)%>%
   summarise('Monthly Total Beneficiaries' = sum(Total_monthly))

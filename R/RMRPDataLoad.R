@@ -115,5 +115,3 @@ df5Wconsolidated <<- df5W %>%
 countrylist <- sort(as.vector(unique(df5Wconsolidated$Country)))
 
 orglist <- sort(as.vector(unique(df5Wconsolidated$Appealing_org)))
-
-#rm(df5W, dfindicator)

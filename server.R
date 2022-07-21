@@ -18,11 +18,7 @@ shinyServer(function(input, output, session) {
     df
   })
   
-  # datafinal <- reactive({
-  #   
-  #  reached <- source("R/ConsolidatedGenerator.R")
-  # })
-  # 
+
   
   ## Preview of NUmber of questions
   output$nactivities <- renderText({nrow(data())})
