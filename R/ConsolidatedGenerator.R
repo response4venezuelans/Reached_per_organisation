@@ -12,6 +12,7 @@ library(writexl)
 #### Montly volume of attention ###
 #### General ####
 
+## Check if need to insert filters here
 
 monthlysectors <- df5Wconsolidated %>%
   group_by(Country, Appealing_org, Month, Subsector)%>%
