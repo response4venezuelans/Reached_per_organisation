@@ -18,9 +18,7 @@ shinyServer(function(input, output, session) {
     df
   })
   
-  data2 <- reactive({
-    df2 <- ConsolidatedPerCountryperOrg
-  })
+  data2 <- ConsolidatedPerCountryperOrg
   
   ## Preview of NUmber of questions
   output$nactivities <- renderText({nrow(data())})
@@ -44,7 +42,7 @@ shinyServer(function(input, output, session) {
       paste("People Reached Per Organisation", ".xlsx", sep = "")
     },
     content = function(file) {
-      write_xlsx(data(), file)
+      write_xlsx(data2, file)
     }
   )
 

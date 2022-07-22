@@ -12,7 +12,6 @@ library(writexl)
 #### Montly volume of attention ###
 #### General ####
 
-source("./R/RMRPDataLoad.R")
 
 monthlysectors <- df5Wconsolidated %>%
   group_by(Country, Appealing_org, Month, Subsector)%>%
@@ -246,7 +245,7 @@ FinalConsolidatedReg <- rbind(FinalConsolidated, RegionalFigures)%>%
 
 # Print file as single table # 
 
-write_xlsx(FinalConsolidatedReg, "Consolidated_per_OrgSingleTable.xlsx")
+#write_xlsx(FinalConsolidatedReg, "Consolidated_per_OrgSingleTable.xlsx")
 
 # Print file split by countries
 
